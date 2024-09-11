@@ -1,7 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {RouterView} from 'vue-router'
+
+</script>
 
 <template>
-  <div></div>
+  <div class="app-wrapper">
+    <router-view v-slot="{Component}">
+      <component :is="Component" />
+    </router-view>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.app-wrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+</style>
