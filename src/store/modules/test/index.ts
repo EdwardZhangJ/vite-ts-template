@@ -23,5 +23,6 @@ export const useTestStore = defineStore({
     },
 
   },
+  persist: true,
 })
 
