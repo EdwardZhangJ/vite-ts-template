@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
 import { setupStore } from './store'
 import { setupRouter } from './router'
 import { setupVuetify } from './plugins'
+import { setupStyle } from './styles'
 
 
 const setupApp = async () => {
@@ -17,6 +17,8 @@ const setupApp = async () => {
 
   // 挂载路由
   setupRouter(app)
+
+  setupStyle()
 
 
   app.mount('#app')
