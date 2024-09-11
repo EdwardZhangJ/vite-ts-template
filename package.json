@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/node": "^22.5.4",
+    "less": "^4.2.0",
     "pinia": "^2.2.2",
     "pinia-plugin-persistedstate": "^4.0.1",
     "vite-plugin-vuetify": "^2.0.4",

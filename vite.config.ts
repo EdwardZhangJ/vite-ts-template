@@ -7,6 +7,18 @@ import vuetify from 'vite-plugin-vuetify'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  css: {
+    preprocessorOptions:{
+      less: {
+        modifyVars: {
+          'primary-color': '#1890ff',
+          'link-color': '#1890ff',
+          'border-radius-base': '2px',
+        },
+        javascriptEnabled: true,
+      }
+    }
+  },
   plugins: [
     vue(),
     UnoCSS(),
