@@ -14,5 +14,48 @@ export default defineConfig({
       'assets': resolve(__dirname, 'src/assets'),
       'utils': resolve(__dirname, 'src/utils'),
     }
+  },
+  server: {
+    host: true,
+    port: 8080,
+    open: true,
+    cors: true, // 允许跨域
+    proxy: {
+      // '/api': {
+      //   target: 'http://localhost:3200/',
+      //   changeOrigin: true,
+      //   rewrite: (path) => path.replace(/^\/api/, '') // 重写路径把路径变成空字符
+      // }
+    },
+
+
+
+  },
+  // 打包选项
+  build: {
+    // 消除打包大小超过500kb警告
+    chunkSizeWarningLimit: 2000,
+    // 在生产环境移除console.log
+    terserOptions: {
+      compress: {
+        drop_console: false,
+        pure_funcs: ['console.log', 'console.info'],
+        drop_debugger: true,
+      },
+    },
+    // 指定生成静态资源的存放路径
+    assetsDir: 'static/assets',
+    // 静态资源打包到dist下的不同目录
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'static/js/[name]-[hash].js',
+        entryFileNames: 'static/js/[name]-[hash].js',
+        assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+      },
+    },
+  },
+  preview: {
+    port: 4173,
+    open: true,
   }
 })
