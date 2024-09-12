@@ -5,11 +5,10 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 export * from './modules'
 
 export function setupStore(app: App) {
-  const store = createPinia()
+	const store = createPinia()
 
-  // 添加 pinia store 可持久化插件
-  store.use(piniaPluginPersistedstate)
+	// 添加 pinia store 可持久化插件
+	store.use(piniaPluginPersistedstate)
 
-  app.use(store)
+	app.use(store)
 }
-

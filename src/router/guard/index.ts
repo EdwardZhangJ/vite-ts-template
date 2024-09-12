@@ -5,13 +5,10 @@ import type { RouteLocationNormalized, Router } from 'vue-router'
  * @param router - 路由实例
  */
 export function createRouterGuard(router: Router) {
+	/** 全局前置守卫 */
+	router.beforeEach(async (to: RouteLocationNormalized) => {})
 
-  /** 全局前置守卫 */
-  router.beforeEach(async (to: RouteLocationNormalized) => {
-  })
+	/** 全局后置钩子 */
 
-  /** 全局后置钩子 */
-
-  router.afterEach(() => {
-  })
+	router.afterEach(() => {})
 }
