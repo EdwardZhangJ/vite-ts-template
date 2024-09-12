@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "dev": "vite --module development",
+    "build:development": "vue-tsc -b && vite build --mode development",
+    "build:test": "vue-tsc -b && vite build --mode test",
+    "build:prod": "vue-tsc -b && vite build --mode production",
     "preview": "vite preview",
     "lint": "eslint --ignore-pattern .gitignore --fix src",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""

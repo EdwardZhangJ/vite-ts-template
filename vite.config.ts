@@ -9,6 +9,7 @@ import eslintPlugin from 'vite-plugin-eslint'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+	envDir: 'env', // 指定环境变量文件所在文件夹
 	css: {
 		preprocessorOptions: {
 			less: {
