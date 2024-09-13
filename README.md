@@ -40,6 +40,7 @@ pnpm build:production
   * `type` 可选值：`feat`、`fix`、`docs`、`style`、`refactor`、`perf`、`test`、`chore`、`revert`
   * `scope` 用于描述修改的范围，例如：`login`、`home`、`common` 等
   * `subject` 用于描述修改的内容
+  * `type`和`subject`中间可添加对应的emoji图标，例如：`feat(login): :sparkles: add login page`
 
 * 且项目配置 `cz-git` 插件
   * 可通过以下命令进行交互式写入提交信息  
@@ -48,7 +49,13 @@ pnpm build:production
 pnpm commit
 ```
 
+* 实在不想按照规范提交，可以使用以下命令提交(但不推荐)
+
+```bash
+git commit --no-verify -m "your commit message" 
+```
+
 ## Recommend
 
 * 推荐使用 [`Vuetify`](https://vuetifyjs.com/zh-Hans/) 组件库
-  * 使用其他组件库自行添加配置
+  * 使用其他组件库需自行配置
