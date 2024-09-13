@@ -10,7 +10,13 @@
     "build:prod": "vue-tsc -b && vite build --mode production",
     "preview": "vite preview",
     "lint": "eslint --ignore-pattern .gitignore --fix src",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": "eslint --fix",
+    "*.{ts,tsx,js,jsx,cjs,mjs,vue,css,scss,less,styl,md,html}": "prettier --write"
   },
   "dependencies": {
     "@types/node": "^22.5.4",
@@ -22,13 +28,18 @@
     "vuetify": "^3.7.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@eslint/js": "^9.10.0",
     "@vitejs/plugin-vue": "^5.1.2",
+    "commitlint": "^19.5.0",
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^9.28.0",
     "globals": "^15.9.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "pinia-plugin-persistedstate": "^4.0.1",
     "prettier": "^3.3.3",
     "typescript": "^5.5.3",
