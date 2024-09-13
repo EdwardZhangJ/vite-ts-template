@@ -12,22 +12,22 @@ import { RouterView } from 'vue-router'
 
 <style>
 #app {
+	position: relative;
+	box-sizing: border-box;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 	font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	width: 100vw;
-	height: 100vh;
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
-	box-sizing: border-box;
-	position: relative;
 }
 </style>
 <style scoped>
 .app-wrapper {
+	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
-	box-sizing: border-box;
 }
 </style>
