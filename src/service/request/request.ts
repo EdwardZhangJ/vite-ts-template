@@ -59,7 +59,7 @@ export class Request {
 	 * @description: 拦截器配置
 	 */
 	private setupInterceptors() {
-		const transform = this.getTransform()
+		// const transform = this.getTransform()
 		// if (!transform) {
 		// 	return
 		// }
@@ -104,7 +104,7 @@ export class Request {
 	 * @description:   请求方法
 	 */
 	request<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
-		let conf: AxiosRequestConfig = config
+		const conf: AxiosRequestConfig = config
 		// let conf: AxiosRequestConfig = cloneDeep(config)
 		const transform = this.getTransform()
 
