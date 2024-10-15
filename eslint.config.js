@@ -42,6 +42,7 @@ export default [
 			'vue/multi-word-component-names': 'off',
 			'no-multiple-empty-lines': ['warn', { max: 1 }],
 			'vue/valid-template-root': 'off',
+			'@typescript-eslint/no-explicit-any': 'off',
 		},
 	},
 ]
