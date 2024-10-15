@@ -35,16 +35,15 @@ export interface RetryRequest {
 	waitTime: number
 }
 
-export interface Result<T = any> {
-	code: number
-	type: 'success' | 'error' | 'warning'
-	message: string
-	result: T
-	info: T
-	msg: string
-}
+// export interface Result<T = unknown> {
+// 	code: number
+// 	type: 'success' | 'error' | 'warning'
+// 	message: string
+// 	result: T
+// 	info: T
+// 	msg: string
+// }
 
 export interface CreateAxiosOptions {
 	requestOptions: string
 }
-export interface UploadFileParams {}

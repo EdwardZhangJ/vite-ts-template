@@ -1,4 +1,4 @@
-import type { RouteLocationNormalized, Router } from 'vue-router'
+import type { Router } from 'vue-router'
 
 /**
  * 路由守卫函数
@@ -6,7 +6,7 @@ import type { RouteLocationNormalized, Router } from 'vue-router'
  */
 export function createRouterGuard(router: Router) {
 	/** 全局前置守卫 */
-	router.beforeEach(async (to: RouteLocationNormalized) => {})
+	router.beforeEach(() => {})
 
 	/** 全局后置钩子 */
 

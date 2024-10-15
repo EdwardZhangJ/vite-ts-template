@@ -7,23 +7,20 @@
 // const { createMessage, createErrorModal } = useMessage()
 // const error = createMessage.error!
 // const stp = projectSetting.sessionTimeoutProcessing
-
-export function checkStatus(status: number, msg: string, errorMessageMode = 'message'): void {
+/**
+ *
+ * @param status
+ * @param msg
+ * @param errorMessageMode 'message'
+ */
+export function checkStatus(status: number, msg: string): void {
 	// const userStore = useUserStoreWithOut()
 	let errMessage = ''
-
 	switch (status) {
 		case 400:
 			errMessage = `${msg}`
 			break
 		case 401:
-			// userStore.setToken(undefined)
-			// errMessage = msg || '用户没有权限（令牌、用户名、密码错误）!'
-			// if (stp === SessionTimeoutProcessingEnum.PAGE_COVERAGE) {
-			// 	userStore.setSessionTimeout(true)
-			// } else {
-			// 	userStore.logout(true)
-			// }
 			break
 		case 403:
 			errMessage = '用户得到授权，但是访问是被禁止的!'
@@ -57,12 +54,12 @@ export function checkStatus(status: number, msg: string, errorMessageMode = 'mes
 			break
 		default:
 	}
-
 	if (errMessage) {
-		// if (errorMessageMode === 'modal') {
-		// 	createErrorModal({ title: '错误提示', content: errMessage })
-		// } else if (errorMessageMode === 'message') {
-		// 	error({ content: errMessage, key: `global_error_message_status_${status}` })
-		// }
+		window.alert(errMessage)
+		// 	if (errorMessageMode === 'modal') {
+		// 		createErrorModal({ title: '错误提示', content: errMessage })
+		// 	} else if (errorMessageMode === 'message') {
+		// 		error({ content: errMessage, key: `global_error_message_status_${status}` })
+		// 	}
 	}
 }
