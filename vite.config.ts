@@ -5,6 +5,9 @@ import { resolve } from 'path'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import eslintPlugin from 'vite-plugin-eslint'
+import Components from 'unplugin-vue-components/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+
 /**
  * 引入vite-plugin-eslint eslint提示引用报错的话 
  * 需要修改 vite-plugin-eslint模块的package.json，找到"import": "./dist/index.mjs"，将其改为：
@@ -58,6 +61,10 @@ export default defineConfig({
 			// Defaults to './auto-imports.d.ts' when `typescript` is installed locally.
 			// Set `false` to disable.
 			dts: './auto-imports.d.ts',
+			dirs: ['src/store/modules', 'src/service/api/*'], // 自定引入 文件路径
+		}),
+		Components({
+			resolvers: [NaiveUiResolver()],
 		}),
 	],
 	resolve: {

@@ -5,7 +5,7 @@ const timeNull = ref(9)
 <template>
 	<div class="index-wrapper">
 		<div class="test-less"></div>
-		<v-btn> Button </v-btn>
+		<n-button type="primary"> Button </n-button>
 
 		<div class="bg-white">
 			<div class="text-20">{{ timeNull }}</div>
