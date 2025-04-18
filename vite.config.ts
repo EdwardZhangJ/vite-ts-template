@@ -3,7 +3,6 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
 import UnoCSS from 'unocss/vite'
-import vuetify from 'vite-plugin-vuetify'
 import AutoImport from 'unplugin-auto-import/vite'
 import eslintPlugin from 'vite-plugin-eslint'
 /**
@@ -33,7 +32,6 @@ export default defineConfig({
 	plugins: [
 		vue(),
 		UnoCSS(),
-		vuetify({ autoImport: true }), // vuetify 组件自动引入
 		eslintPlugin({
 			include: ['src/**/*.js', 'src/**/*.vue'],
 			cache: true,

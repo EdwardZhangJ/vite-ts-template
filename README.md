@@ -54,8 +54,3 @@ pnpm commit
 ```bash
 git commit --no-verify -m "your commit message" 
 ```
-
-## Recommend
-
-* 推荐使用 [`Vuetify`](https://vuetifyjs.com/zh-Hans/) 组件库
-  * 使用其他组件库需自行配置

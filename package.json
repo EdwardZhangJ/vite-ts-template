@@ -30,10 +30,8 @@
     "axios": "^1.7.7",
     "less": "^4.2.0",
     "pinia": "^2.2.2",
-    "vite-plugin-vuetify": "^2.0.4",
     "vue": "^3.4.37",
-    "vue-router": "4",
-    "vuetify": "^3.7.1"
+    "vue-router": "4"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
